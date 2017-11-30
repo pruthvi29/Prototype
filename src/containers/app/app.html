@@ -1,0 +1,18 @@
+<div>
+  <img src="assets/img/set_logo.png" className="App-logo" alt="logo" />  
+  <div class="primary-nav">
+<Navbar :items="primaryNav"></Navbar>
+  </div>
+ <div class="secondary-nav">
+<Navbar :items="secondaryNav" ></Navbar>
+  </div>
+<DealerMultiselect v-model="selectedQuery" :url="dealerURL" ></DealerMultiselect>
+<input type="button" value="Search" class="button_custom" @click="search">
+<div class="grid grid-hide">
+<grid :data="gridData" :columns="gridColumns" :selectedValue="selectedValue"></grid>
+</div>
+
+   <router-view></router-view> 
+   
+</div>
+

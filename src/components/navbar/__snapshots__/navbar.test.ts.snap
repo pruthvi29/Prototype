@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component should render correct contents 1`] = `
+<div>
+  <nav
+    class="navbar navbar-default"
+  >
+    <ul
+      class="nav navbar-nav custom-nav"
+    />
+  </nav>
+</div>
+`;

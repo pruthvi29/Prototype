@@ -1,0 +1,16 @@
+<table>
+    <thead>
+      <tr>
+        <th v-for="key in columns">
+          {{key}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="entry in filteredData" v-if="selectedValue == entry.name">
+        <td v-for="key in columns">
+          {{entry[key]}}
+        </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,23 @@
+<div class="row searchsection">
+  <div class="col-md-12">
+    <label class="typo__label">Select Series and Model</label>
+  </div>
+  <div class="col-md-12">
+    <div :url="url">
+      <!--<multiselect :options="options" track-by="label" label="label" ></multiselect>-->
+      <multiselect v-model="value" :options="options" :multiple="true" :close-on-select="true" :clear-on-select="true" :hide-selected="true"
+        :preserve-search="false" placeholder="Hint: Series, Model" :max-height="150" @input="onChange" label="label" track-by="ModelNumber">
+        <template slot="tag" scope="props">
+          <span class="custom__tag">
+            <span>{{ props.option.name }}</span>
+            <span class="custom__remove" @click="props.remove(props.option)">x</span>
+          </span>
+          <span class="custom__tag">
+            <span>{{ props.option.email }}</span>
+            <span class="custom__remove" @click="props.remove(props.option)">x</span>
+          </span>
+        </template>
+      </multiselect>
+    </div>
+  </div>
+</div>
